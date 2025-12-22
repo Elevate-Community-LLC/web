@@ -1,0 +1,177 @@
+:root {
+    --elcom-primary-blue: #0F294A;
+    --elcom-background-blue: #52647B;
+    --elcom-primary-green: #6FA058;
+    --elcom-background-green: #E8EAE6;
+    --elcom-header-font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --elcom-body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --elcom-font-size: 1rem;
+    --elcom-line-height: 1rem;
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--elcom-header-font-family);
+    color: var(--elcom-primary-blue);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.elcom-content {
+    font-family: var(--elcom-body-font-family);
+    font-size: var(--elcom-font-size);
+    line-height: var(--elcom-line-height);
+}
+
+.elcom-container {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+@media (max-width: 77rem) {
+    .elcom-container {
+        padding: 0 1rem;
+    }
+}
+
+.elcom-navbar {
+    height: 5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.elcom-navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--elcom-background-green);
+    z-index: -1;
+}
+
+.elcom-navbar .elcom-logo {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+}
+
+.elcom-navbar .elcom-logo img {
+    height: 80%;
+}
+
+.elcom-navbar .elcom-logo-text {
+    font-family: var(--elcom-header-font-family);
+    color: var(--elcom-primary-blue);
+    font-size: 2rem;
+    font-weight: 300;
+    padding-top: 1.2rem;
+}
+
+.elcom-navbar .elcom-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    font-family: var(--elcom-body-font-family);
+}
+
+.elcom-navbar .elcom-ul li {
+    color: var(--elcom-primary-blue);
+    transition: color 0.3s ease;
+}
+
+.elcom-navbar .elcom-ul li:hover {
+    color: var(--elcom-primary-green);
+}
+
+.elcom-navbar .elcom-links {
+    padding-top: 1.5rem;
+    margin-left: 2rem;
+}
+
+@media (max-width: 64rem) {
+    .elcom-navbar .elcom-links {
+        display: none;
+    }
+}
+
+.elcom-navbar .elcom-quick-contact {
+    margin-left: auto;
+    height: 100%;
+}
+
+.elcom-navbar .elcom-quick-contact * {
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.elcom-hero {
+    width: 100%;
+    height: 60vh;
+}
+
+.elcom-hero::before {
+    content: "";
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    background-color: rgba(15, 41, 74, 0.7);
+    z-index: 1;
+}
+
+.elcom-hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.elcom-hero .elcom-hero-text {
+    position: absolute;
+    top: 56vh;
+    left: max(0rem, calc(50vw - 37.5rem));
+    color: var(--elcom-primary-blue);
+    font-family: var(--elcom-header-font-family);
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 5rem;
+    height: 5rem;
+    background-color: var(--elcom-primary-green);
+    padding: 0 1rem;
+    z-index: 2;
+}
+
+@media (max-width: 120rem) {
+    .elcom-hero .elcom-hero-text::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: min(0rem, calc(37.5rem - 50vw));
+        width: max(0rem, calc(50vw - 37.5rem));
+        height: 5rem;
+        background-color: var(--elcom-primary-green);
+        z-index: -1;
+    }
+}
