@@ -6,33 +6,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Elevate Community LLC</title>
     <link rel="icon" type="image/png" href="/icon-elevate.png" />
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/index.css?v=12334">
 </head>
 
 <body>
 
+<div class="elcom-popup-background" onclick="closeNavbarMobileMenu()"></div>
+
 <div class="elcom-container elcom-navbar">
     <a class="elcom-logo" href="">
-        <img src="/icon-elevate.png" alt="Elevate Community LLC Logo">
-        <span class="elcom-logo-text">Elevate Community</span>
+        <img src="/icons/logo.svg" alt="Elevate Community LLC Logo">
     </a>
-    <ul class="elcom-ul elcom-links elcom-content">
-        <li><a href="">Home</a></li>
+    <ul class="elcom-ul elcom-links elcom-nav">
+        <li><a href="/">Home</a></li>
         <li><a href="">Services</a></li>
         <li><a href="">Portfolio</a></li>
         <li><a href="">About</a></li>
         <li><a href="">Contact</a></li>
     </ul>
-    <div class="elcom-ul elcom-quick-contact">
-        <li><a href="callto:3603207728"><img src="/icon-phone.svg" alt="Phone Icon" width="32px" height="32px"/></a></li>
-        <li><a href="mailto:brandon@elevatecommunity.llc"><img src="/icon-mail.svg" alt="Email Icon" width="32px" height="32px"/></a></li>
-    </div>
+    <ul class="elcom-ul elcom-links elcom-quick-contact">
+        <li><a href="mailto:brandon@elevatecommunity.llc"><img src="/icons/mail.svg" alt="Email Icon" width="32px" height="32px"/></a></li>
+        <li><a href="callto:3603207728"><img src="/icons/phone.svg" alt="Phone Icon" width="32px" height="32px"/></a></li>
+        <li><a href="#" onclick="toggleNavbarMobileMenu();"><img src="/icons/menu.svg" alt="Menu Icon" width="32px" height="32px"/></a></li>
+    </ul>
 </div>
 
 <div class="elcom-hero">
     <img src="/images/hero.jpg"/>
     <div class="elcom-hero-text">Elevate Your Presence</div>
 </div>
+
+<div class="elcom-section elcom-services">
+    <div class="elcom-container">
+        <div class="elcom-title">Our Services</div>
+        <div class="elcom-card-group-3">
+            <div class="elcom-card">
+                <picture>
+                    <img src="/images/card-1.jpg"/>
+                </picture>
+                <div class="elcom-subtitle">Contracting</div>
+                <div class="elcom-content">Utilize our flexible contracted services to help you build and manage your unique projects effectively. We'll match relevant skillsets to your specific needs.</div>
+            </div>
+            <div class="elcom-card">
+                <picture>
+                    <img src="/images/card-2.jpg"/>
+                </picture>
+                <div class="elcom-subtitle">Skills Progression</div>
+                <div class="elcom-content">Members build their own careers paths and improve their skills and knowledge through a structured learning framework.</div>
+            </div>
+            <div class="elcom-card">
+                <picture>
+                    <img src="/images/card-3.jpg"/>
+                </picture>
+                <div class="elcom-subtitle">Communities of Practice</div>
+                <div class="elcom-content">We foster collaborative communities where members share knowledge, best practices, and support each other's professional growth.</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="elcom-section elcom-about">
+    
+    <div class="elcom-container">
+        <div class="elcom-sbs">
+            <div class="elcom-sbs-left">
+                <div class="elcom-title">About Us</div>
+                <div class="elcom-subtitle">Elevate Community</div>
+                <div class="elcom-content">    
+                    <div>
+                        Elevate Community, LLC is dedicated to empowering
+                        professionals through contracting services, skills
+                        progression, and communities of practice. Our mission
+                        is to foster growth and collaboration in the
+                        professional world.
+                    </div>
+                    <div>
+                        We have <span class="elcom-subtitle">7+ years</span>
+                        of solar and enterprise software experience.
+                    </div>
+                    <div>
+                        Projects in our portfolio include:
+                        <ul class="elcom-ul">
+                            <li>Solar energy system design and installation</li>
+                            <li>Enterprise software development and deployment</li>
+                            <li>Project management for large-scale technology initiatives</li>
+                        </ul>
+                    </div>
+                    <a href="" class="elcom-button">Join our Network</a>
+                </div>
+            </div>
+            <div class="elcom-sbs-right">
+                <picture>
+                    <img src="/images/about.jpg" alt="About Us Image"/>
+                </picture>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="elcom-section elcom-cta">
+    <div class="elcom-container">
+        <div class="elcom-title">Ready to Elevate Your Presence?</div>
+        <div class="elcom-subtitle">Set an introductory call to see how you can get involved.</div>
+        <a href="" class="elcom-button">Contact Us</a>
+    </div>
+</div>
+
+<div class="elcom-section elcom-footer">
+    <div class="elcom-container">
+        <img src="/logo.svg"/>
+        <div class="elcom-content">
+            <ul class="elcom-ul elcom-links elcom-nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="">Services</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+            <div class="copyright">&copy; 2026 Elevate Community, LLC. All rights reserved.</div>
+        </div>
+        <ul class="elcom-ul elcom-links elcom-quick-contact">
+            <li><a href="mailto:brandon@elevatecommunity.llc"><img src="/icons/mail.svg" alt="Email Icon" width="32px" height="32px"/></a></li>
+            <li><a href="callto:3603207728"><img src="/icons/phone.svg" alt="Phone Icon" width="32px" height="32px"/></a></li>        
+        </ul>
+    </div>
+</div>
+
+<script src="/js/navbar-toggle.js"></script>
+<script src="/js/active-page.js"></script>
+
+<script>
+    setActivePage();
+</script>
 
 </body>
 

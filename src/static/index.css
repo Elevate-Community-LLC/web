@@ -6,7 +6,7 @@
     --elcom-header-font-family: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --elcom-body-font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --elcom-font-size: 1rem;
-    --elcom-line-height: 1rem;
+    --elcom-line-height: 1.5rem;
 }
 
 body {
@@ -15,20 +15,39 @@ body {
     padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--elcom-header-font-family);
-    color: var(--elcom-primary-blue);
-}
-
 a {
     text-decoration: none;
     color: inherit;
 }
 
-.elcom-content {
+.elcom-popup-background {
+    position: fixed;
+    top: 5rem;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 41, 74, 0.8);
+    z-index: -1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.elcom-title {
+    font-family: var(--elcom-header-font-family);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--elcom-primary-blue);
+}
+
+.elcom-subtitle {
     font-family: var(--elcom-body-font-family);
-    font-size: var(--elcom-font-size);
-    line-height: var(--elcom-line-height);
+    font-size: 1.5rem;
+    color: var(--elcom-primary-green);
+    margin-bottom: 1rem;
+}
+
+.elcom-section {
+    padding: 5rem 0;
 }
 
 .elcom-container {
@@ -40,6 +59,63 @@ a {
     .elcom-container {
         padding: 0 1rem;
     }
+}
+
+.elcom-content {
+    font-family: var(--elcom-body-font-family);
+    font-size: var(--elcom-font-size);
+    line-height: var(--elcom-line-height);
+}
+
+.elcom-button {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--elcom-primary-green);
+    font-family: var(--elcom-body-font-family);
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    border: 1px solid var(--elcom-primary-green);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.elcom-button:hover {
+    background-color: var(--elcom-primary-green);
+    color: #eee;
+}
+
+.elcom-links.elcom-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+    font-family: var(--elcom-body-font-family);
+}
+
+.elcom-links.elcom-ul li a {
+    color: var(--elcom-primary-blue);
+    transition: color 0.3s ease;
+}
+
+.elcom-links.elcom-ul li a:hover {
+    color: var(--elcom-primary-green);
+}
+
+.elcom-active {
+    color: var(--elcom-primary-green) !important;
+}
+
+.elcom-quick-contact img {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(15%) saturate(6346%) hue-rotate(192deg) brightness(97%) contrast(93%);
+    transition: filter 0.3s ease;
+}
+
+.elcom-quick-contact img:hover {
+    filter: brightness(0) saturate(100%) invert(58%) sepia(21%) saturate(796%) hue-rotate(57deg) brightness(94%) contrast(93%);
 }
 
 .elcom-navbar {
@@ -70,7 +146,7 @@ a {
 }
 
 .elcom-navbar .elcom-logo img {
-    height: 80%;
+    height: 3rem;
 }
 
 .elcom-navbar .elcom-logo-text {
@@ -81,48 +157,50 @@ a {
     padding-top: 1.2rem;
 }
 
-.elcom-navbar .elcom-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1.5rem;
-    font-family: var(--elcom-body-font-family);
-}
-
-.elcom-navbar .elcom-ul li {
-    color: var(--elcom-primary-blue);
-    transition: color 0.3s ease;
-}
-
-.elcom-navbar .elcom-ul li:hover {
-    color: var(--elcom-primary-green);
-}
-
-.elcom-navbar .elcom-links {
-    padding-top: 1.5rem;
+.elcom-navbar .elcom-nav {
     margin-left: 2rem;
-}
-
-@media (max-width: 64rem) {
-    .elcom-navbar .elcom-links {
-        display: none;
-    }
+    opacity: 1;
 }
 
 .elcom-navbar .elcom-quick-contact {
     margin-left: auto;
-    height: 100%;
 }
 
 .elcom-navbar .elcom-quick-contact * {
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-    height: 100%;
+    height: 32px;
+}
+
+.elcom-navbar .elcom-quick-contact li:last-child {
+    display: none;
+}
+
+/* Desktop styles */
+@media (max-width: 48rem) {
+    .elcom-navbar .elcom-nav {
+        position: fixed;
+        top: 5rem;
+        right: 0;
+        width: 8rem;
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--elcom-background-blue);
+        margin: 0;
+        padding: 2rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        gap: 0.5rem;
+        z-index: -1000;
+    }
+    .elcom-navbar .elcom-nav li a {
+        color: #ddd;
+        display: inline-block;
+        height: 2rem;
+        line-height: 2rem;
+        width: 8rem;
+    }
+    .elcom-navbar .elcom-quick-contact li:last-child {
+        display: block;
+    }
 }
 
 .elcom-hero {
@@ -163,15 +241,193 @@ a {
     z-index: 2;
 }
 
-@media (max-width: 120rem) {
+.elcom-hero .elcom-hero-text::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: min(0rem, calc(37.5rem - 50vw));
+    width: max(0rem, calc(50vw - 37.5rem));
+    height: 5rem;
+    background-color: var(--elcom-primary-green);
+    z-index: -1;
+}
+
+/* Mobile & Tablet styles */
+@media (max-width: 64rem) {
+    .elcom-hero .elcom-hero-text {
+        font-size: 2rem;
+        line-height: 4rem;
+        height: 4rem;
+    }
+}
+
+/* Large desktop styles */
+@media (min-width: 120rem) {
     .elcom-hero .elcom-hero-text::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: min(0rem, calc(37.5rem - 50vw));
-        width: max(0rem, calc(50vw - 37.5rem));
-        height: 5rem;
-        background-color: var(--elcom-primary-green);
-        z-index: -1;
+        width: 0;
+    }
+}
+
+.elcom-services {
+    background-color: var(--elcom-background-green);
+}
+
+.elcom-services .elcom-title {
+    margin-bottom: 2rem;
+}
+
+.elcom-services .elcom-card-group-3 {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.elcom-services .elcom-card-group-3 .elcom-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.elcom-services picture {
+    width: 100%;
+    height: 15rem;
+    margin-bottom: 2rem;
+}
+
+.elcom-services img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Mobile styles */
+@media (max-width: 48rem) {
+    .elcom-services .elcom-card-group-3 {
+        flex-direction: column;
+    }
+
+    .elcom-services picture {
+        height: 20rem;
+    }
+}
+
+.elcom-about {
+    background-color: var(--elcom-primary-blue);
+}
+
+.elcom-about .elcom-sbs {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+}
+
+.elcom-about .elcom-sbs-left, .elcom-about .elcom-sbs-right {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+}
+
+.elcom-about picture {
+    height: 100%;
+    position: relative;
+}
+
+.elcom-about .elcom-title, .elcom-about .elcom-content div {
+    color: #eee;
+    margin-bottom: 2rem;
+}
+
+.elcom-about img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Mobile styles */
+@media (max-width: 48rem) {
+    .elcom-about.elcom-section {
+        padding-bottom: 0;
+    }
+
+    .elcom-about .elcom-sbs {
+        flex-direction: column;
+        gap: 5rem;
+    }
+
+    .elcom-about picture {
+        margin: 0 -1rem;
+        height: 20rem;
+    }
+}
+
+
+.elcom-cta {
+    background-color: var(--elcom-background-green);
+    text-align: center;
+}
+
+.elcom-cta * {
+    margin-bottom: 0.5rem;
+}
+
+.elcom-cta *:last-child {
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 48rem) {
+    .elcom-cta .elcom-title {
+        font-size: 1.5rem;
+    }
+
+    .elcom-cta .elcom-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+.elcom-footer {
+    background-color: var(--elcom-background-blue);
+}
+
+.elcom-footer .elcom-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.elcom-footer .elcom-container>* {
+    min-width: 16rem;
+}
+
+.elcom-footer img {
+    max-width: 16rem;
+}
+
+.elcom-footer .elcom-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--elcom-primary-blue);
+}
+
+.elcom-footer .elcom-quick-contact {
+    justify-content: flex-end;
+}
+
+@media (max-width: 64rem) {
+    .elcom-footer .elcom-container {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+    .elcom-footer .elcom-quick-contact {
+        display: none;
     }
 }
