@@ -15,6 +15,24 @@ body {
     padding: 0;
 }
 
+@font-face {
+    font-family: "Lato";
+    font-weight: 300;
+    src: url(/fonts/Lato-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 500;
+  src: url(/fonts/Lato-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "Lato";
+    font-weight: 700;
+    src: url(/fonts/Lato-Bold.ttf) format("truetype");
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -262,7 +280,7 @@ a {
 }
 
 /* Large desktop styles */
-@media (min-width: 120rem) {
+@media (min-width: 140rem) {
     .elcom-hero .elcom-hero-text::before {
         width: 0;
     }
@@ -414,7 +432,23 @@ a {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    color: var(--elcom-primary-blue);
+    color: var(--elcom-background-green);
+}
+
+.elcom-footer .elcom-links.elcom-ul li a {
+    color: var(--elcom-background-green);
+}
+
+.elcom-footer .elcom-links.elcom-ul li a:hover {
+    color: var(--elcom-primary-green);
+}
+
+.elcom-footer .elcom-quick-contact img {
+    filter: brightness(0) saturate(100%) invert(99%) sepia(2%) saturate(26%) hue-rotate(137deg) brightness(102%) contrast(82%);
+}
+
+.elcom-footer .elcom-quick-contact img:hover {
+    filter: brightness(0) saturate(100%) invert(58%) sepia(21%) saturate(796%) hue-rotate(57deg) brightness(94%) contrast(93%);
 }
 
 .elcom-footer .elcom-quick-contact {
