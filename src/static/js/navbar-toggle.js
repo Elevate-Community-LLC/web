@@ -1,11 +1,11 @@
-function toggleNavbarMobileMenu() {
+function toggleNavbarMobileMenu(shouldOpen = false) {
   const navMenu = document.querySelector('.elcom-navbar .elcom-nav');
 
   if (navMenu.style.opacity === '1') {
     closeNavbarMobileMenu();
   }
 
-  else {
+  else if (shouldOpen) {
     const popupBg = document.querySelector('.elcom-popup-background');
     const toggleButton = document.querySelector('.elcom-navbar .elcom-quick-contact li:last-child img');
 
