@@ -331,16 +331,16 @@ a {
     }
 }
 
-#portfolio {
+#platforms {
     background-color: var(--elcom-primary-blue)
 }
 
-.elcom-portfolio .elcom-title, .elcom-portfolio .elcom-content {
+.elcom-platforms .elcom-title, .elcom-platforms .elcom-content {
     color: var(--elcom-background-green);
     margin-bottom: 2rem;
 }
 
-.elcom-portfolio .elcom-card-group-4 {
+.elcom-platforms .elcom-card-group-4 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -348,18 +348,18 @@ a {
     gap: 2rem 0;
 }
 
-.elcom-portfolio .elcom-card-group-4 .elcom-card {
+.elcom-platforms .elcom-card-group-4 .elcom-card {
     display: flex;
     flex-direction: column;
     width: 25%;
 }
 
-.elcom-portfolio picture {
+.elcom-platforms picture {
     width: 100%;
     height: 4rem;
 }
 
-.elcom-portfolio img {
+.elcom-platforms img {
     height: 100%;
     width: 100%;
     object-fit: contain;
@@ -368,7 +368,7 @@ a {
 
 /* Mobile styles */
 @media (max-width: 48rem) {
-    .elcom-portfolio .elcom-card-group-4 .elcom-card {
+    .elcom-platforms .elcom-card-group-4 .elcom-card {
         width: 50%;
     }
 }
