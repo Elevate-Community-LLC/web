@@ -83,6 +83,7 @@ a {
     font-family: var(--elcom-body-font-family);
     font-size: var(--elcom-font-size);
     line-height: var(--elcom-line-height);
+    text-align: justify
 }
 
 .elcom-button {
@@ -330,8 +331,50 @@ a {
     }
 }
 
+#portfolio {
+    background-color: var(--elcom-primary-blue)
+}
+
+.elcom-portfolio .elcom-title, .elcom-portfolio .elcom-content {
+    color: var(--elcom-background-green);
+    margin-bottom: 2rem;
+}
+
+.elcom-portfolio .elcom-card-group-4 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    gap: 2rem 0;
+}
+
+.elcom-portfolio .elcom-card-group-4 .elcom-card {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.elcom-portfolio picture {
+    width: 100%;
+    height: 4rem;
+}
+
+.elcom-portfolio img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Mobile styles */
+@media (max-width: 48rem) {
+    .elcom-portfolio .elcom-card-group-4 .elcom-card {
+        width: 50%;
+    }
+}
+
 .elcom-about {
-    background-color: var(--elcom-primary-blue);
+    background-color: var(--elcom-background-green);
 }
 
 .elcom-about .elcom-sbs {
@@ -354,7 +397,6 @@ a {
 }
 
 .elcom-about .elcom-title, .elcom-about .elcom-content div {
-    color: #eee;
     margin-bottom: 2rem;
 }
 
@@ -385,8 +427,12 @@ a {
 
 
 .elcom-cta {
-    background-color: var(--elcom-background-green);
+    background-color: var(--elcom-primary-blue);
     text-align: center;
+}
+
+.elcom-cta .elcom-title {
+    color: var(--elcom-background-green);
 }
 
 .elcom-cta * {

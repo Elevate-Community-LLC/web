@@ -1,0 +1,23 @@
+<svg width="200" height="60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Light mode version of the logo -->
+  <defs>
+    <linearGradient id="lightGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2563eb;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background (transparent for light backgrounds) -->
+  <rect width="200" height="60" fill="transparent" />
+  
+  <!-- Main logo text -->
+  <text x="20" y="35" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1f2937">
+    ELEVATE
+  </text>
+  
+  <!-- Accent element -->
+  <circle cx="180" cy="30" r="8" fill="url(#lightGradient)" />
+  
+  <!-- Underline accent -->
+  <rect x="20" y="42" width="120" height="3" fill="url(#lightGradient)" rx="1.5" />
+</svg>
