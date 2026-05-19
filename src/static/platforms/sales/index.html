@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Platforms | Elevate Community LLC</title>
+    <link rel="icon" type="image/png" href="/icons/elevate.png" />
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/interior.css">
+</head>
+
+<body>
+
+<div class="elcom-popup-background" onclick="closeNavbarMobileMenu()"></div>
+
+<div class="elcom-container elcom-navbar" data-nosnippet>
+    <a class="elcom-logo" href="/">
+        <img loading="eager" src="/icons/logo.svg" alt="Elevate Community LLC Logo">
+    </a>
+    <ul class="elcom-ul elcom-links elcom-nav">
+        <li
+            onmouseenter="mouseEnterNavDrop('services')"
+            onmouseleave="mouseLeaveNavDrop('services')"
+            >
+            <a
+                href="/services"
+                >
+                Services
+            </a>
+            <ul class="elcom-ul elcom-links elcom-nav elcom-nav-drop" data-nav-drop="services">
+                <li><a href="/services/solar-expertise">Solar Expertise</a></li>
+                <li><a href="/services/implementation">Implementation</a></li>
+                <li><a href="/services/integration">Integration</a></li>
+                <li><a href="/services/optimization">Optimization</a></li>
+                <li><a href="/services/customization">Customization</a></li>
+            </ul>
+        </li>
+        <li
+            onmouseenter="mouseEnterNavDrop('platforms')"
+            onmouseleave="mouseLeaveNavDrop('platforms')"
+            >
+            <a href="/platforms">Platforms</a>
+            <ul class="elcom-ul elcom-links elcom-nav elcom-nav-drop" data-nav-drop="platforms">
+                <li><a href="/platforms/sales">Sales</a></li>
+                <li><a href="/platforms/work-management">Work Management</a></li>
+                <li><a href="/platforms/field-operations">Field Operations</a></li>
+                <li><a href="/platforms/finance-accounting">Finance &amp; Accounting</a></li>
+            </ul>
+        </li>
+        <li
+            onmouseenter="mouseEnterNavDrop('products')"
+            onmouseleave="mouseLeaveNavDrop('products')"
+            >
+            <a href="/products">Products</a>
+            <ul class="elcom-ul elcom-links elcom-nav elcom-nav-drop" data-nav-drop="products">
+                <li><a href="/products/salesforce">Salesforce</a></li>
+                <li><a href="/products/procore">Procore</a></li>
+                <li><a href="/products/sage">Sage</a></li>
+                <li><a href="/products/workato">Workato</a></li>
+            </ul>
+        </li>
+        <li
+            onmouseenter="mouseEnterNavDrop('stories')"
+            onmouseleave="mouseLeaveNavDrop('stories')"
+            >
+            <a href="/stories">Stories</a>
+            <ul class="elcom-ul elcom-links elcom-nav elcom-nav-drop" data-nav-drop="stories">
+                <li><a href="/stories/procore-sage-connector">Procore &amp; Sage Connector</a></li>
+                <li><a href="/stories/salesforce-sage-payments-middleware">Salesforce &amp; Sage Payments Middleware</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="/about">About</a>
+        </li>
+        <li><a href="mailto:brandon@elevatecommunity.llc">Contact</a></li>
+    </ul>
+    <ul class="elcom-ul elcom-links elcom-quick-contact">
+        <li><a href="mailto:brandon@elevatecommunity.llc"><img loading="eager" src="/icons/mail.svg" alt="Email Icon" width="32px" height="32px"/></a></li>
+        <li><a href="callto:3603207728"><img loading="eager" src="/icons/phone.svg" alt="Phone Icon" width="32px" height="32px"/></a></li>
+        <li><a href="#" onclick="toggleNavbarMobileMenu(true);"><img loading="eager" src="/icons/menu.svg" alt="Menu Icon" width="32px" height="32px"/></a></li>
+    </ul>
+</div>
+
+<div class="elcom-section elcom-interior">
+    <div class="elcom-container">
+        <div class="elcom-content">
+            <h1 class="elcom-title">Sales Platforms</h1>
+            <p>Optimize your sales operations with our tailored solutions designed to enhance efficiency, accuracy, and compliance. We specialize in integrating cutting-edge technologies that streamline sales workflows, improve data integrity, and empower your sales teams to perform at their best. From real-time sales reporting to automated transaction processing, our services ensure that your sales functions are seamlessly connected with your overall business systems, enabling better decision-making and faster response times. Partner with us to transform your sales operations into a competitive advantage.</p>
+        </div>
+    </div>
+</div>
+
+<div class="elcom-section elcom-cta" id="contact">
+    <div class="elcom-container">
+        <div class="elcom-title">Ready to Elevate Your Presence?</div>
+        <div class="elcom-subtitle">Set an introductory call to see how you can get involved.</div>
+        <a href="mailto:brandon@elevatecommunity.llc" class="elcom-button">Contact Us</a>
+    </div>
+</div>
+
+<div class="elcom-section elcom-footer" data-nosnippet>
+    <div class="elcom-container">
+        <a href="/">
+            <img src="/logo.svg"/>
+        </a>
+        <div class="elcom-content">
+            <ul class="elcom-ul elcom-links elcom-nav">
+                <li><a href="/services">Services</a></li>
+                <li><a href="/platforms">Platforms</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/stories">Stories</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="mailto:brandon@elevatecommunity.llc">Contact</a></li>
+            </ul>
+            <div class="copyright">&copy; 2026 Elevate Community, LLC. All rights reserved.</div>
+        </div>
+        <ul class="elcom-ul elcom-links elcom-quick-contact">
+            <li><a href="mailto:brandon@elevatecommunity.llc"><img src="/icons/mail.svg" alt="Email Icon" width="32px" height="32px"/></a></li>
+            <li><a href="callto:3603207728"><img src="/icons/phone.svg" alt="Phone Icon" width="32px" height="32px"/></a></li>        
+        </ul>
+    </div>
+</div>
+
+<script src="/js/navbar-toggle.js"></script>
+<script src="/js/nav-drop-toggle.js"></script>
+<script src="/js/active-page.js"></script>
+
+<script>
+    setActivePage();
+</script>
+
+</body>
+
+</html>

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Elevate Community LLC</title>
     <link rel="icon" type="image/png" href="/icons/elevate.png" />
-    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
 <body>
@@ -14,14 +15,66 @@
 <div class="elcom-popup-background" onclick="closeNavbarMobileMenu()"></div>
 
 <div class="elcom-container elcom-navbar" data-nosnippet>
-    <a class="elcom-logo" href="">
+    <a class="elcom-logo" href="/">
         <img loading="eager" src="/icons/logo.svg" alt="Elevate Community LLC Logo">
     </a>
     <ul class="elcom-ul elcom-links elcom-nav">
-        <li><a href="/">Home</a></li>
-        <li><a class="smooth-scroll-link" href="#services" onclick="toggleNavbarMobileMenu();">Services</a></li>
-        <li><a class="smooth-scroll-link" href="#platforms" onclick="toggleNavbarMobileMenu();">Platforms</a></li>
-        <li><a class="smooth-scroll-link" href="#about" onclick="toggleNavbarMobileMenu();">About</a></li>
+        <li
+            onmouseenter="mouseEnterNavDrop('services')"
+            onmouseleave="mouseLeaveNavDrop('services')"
+            >
+            <a
+                href="#services"
+                class="smooth-scroll-link"
+                onclick="toggleNavbarMobileMenu() || mouseLeaveNavDrop('services');"
+                >
+                Services
+            </a>
+            <ul class="elcom-ul elcom-links elcom-nav elcom-nav-drop" data-nav-drop="services">
+                <li><a href="/services/solar-expertise">Solar Expertise</a></li>
+                <li><a href="/services/implementation">Implementation</a></li>
+                <li><a href="/services/integration">Integration</a></li>
+                <li><a href="/services/optimization">Optimization</a></li>
+                <li><a href="/services/customization">Customization</a></li>
+            </ul>
+        </li>
+        <li
+            onmouseenter="mouseEnterNavDrop('platforms')"
+            onmouseleave="mouseLeaveNavDrop('platforms')"
+            >
+            <a class="smooth-scroll-link" href="#platforms" onclick="toggleNavbarMobileMenu() || mouseLeaveNavDrop('platforms');">Platforms</a>
+            <ul class="elcom-ul elcom-links elcom-nav elcom-nav-drop" data-nav-drop="platforms">
+                <li><a href="/platforms/sales">Sales</a></li>
+                <li><a href="/platforms/work-management">Work Management</a></li>
+                <li><a href="/platforms/field-operations">Field Operations</a></li>
+                <li><a href="/platforms/finance-accounting">Finance &amp; Accounting</a></li>
+            </ul>
+        </li>
+        <li
+            onmouseenter="mouseEnterNavDrop('products')"
+            onmouseleave="mouseLeaveNavDrop('products')"
+            >
+            <a class="smooth-scroll-link" href="#products" onclick="toggleNavbarMobileMenu() || mouseLeaveNavDrop('products');">Products</a>
+            <ul class="elcom-ul elcom-links elcom-nav elcom-nav-drop" data-nav-drop="products">
+                <li><a href="/products/salesforce">Salesforce</a></li>
+                <li><a href="/products/procore">Procore</a></li>
+                <li><a href="/products/sage">Sage</a></li>
+                <li><a href="/products/workato">Workato</a></li>
+            </ul>
+        </li>
+        <li
+            onmouseenter="mouseEnterNavDrop('stories')"
+            onmouseleave="mouseLeaveNavDrop('stories')"
+            >
+            <a class="smooth-scroll-link" href="#stories" onclick="toggleNavbarMobileMenu() || mouseLeaveNavDrop('stories');">Stories</a>
+            <ul class="elcom-ul elcom-links elcom-nav elcom-nav-drop" data-nav-drop="stories">
+                <li><a href="/stories/procore-sage-connector">Procore &amp; Sage Connector</a></li>
+                <li><a href="/stories/salesforce-sage-payments-middleware">Salesforce &amp; Sage Payments Middleware</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="smooth-scroll-link" href="#about" onclick="toggleNavbarMobileMenu();">About</a>
+        </li>
         <li><a href="mailto:brandon@elevatecommunity.llc">Contact</a></li>
     </ul>
     <ul class="elcom-ul elcom-links elcom-quick-contact">
@@ -33,74 +86,139 @@
 
 <div class="elcom-hero">
     <img loading="eager" src="/images/hero.jpg"/>
-    <div class="elcom-hero-text" style="font-weight: 300;">Elevate Your Presence</div>
+    <div class="elcom-hero-text" style="font-weight: 300;">Elevate Your Technology</div>
 </div>
 
 <div class="elcom-section elcom-services" id="services">
     <div class="elcom-container">
         <div class="elcom-title">Leverage Skilled Services with Flexibility</div>
         <div class="elcom-card-group-3">
-            <div class="elcom-card">
+            <a href="/services/solar-expertise" class="elcom-card">
                 <picture>
-                    <img src="/images/card-1.jpg" loading="lazy"/>
+                    <img src="/images/solar.jpg" loading="lazy"/>
                 </picture>
-                <div class="elcom-subtitle">Contracting</div>
+                <div class="elcom-subtitle">Solar Expertise <img src="/icons/arrow-top-right.svg" loading="lazy" width="24px" height="24px" /></div>
                 <div class="elcom-content">Utilize our flexible contracted services to help you build and manage your unique projects effectively. We'll match relevant skillsets to your specific needs.</div>
-            </div>
-            <div class="elcom-card">
+            </a>
+            <a href="/services/implementation" class="elcom-card">
                 <picture>
-                    <img src="/images/card-2.jpg" loading="lazy"/>
+                    <img src="/images/new-chapter.jpg" loading="lazy"/>
                 </picture>
-                <div class="elcom-subtitle">Skills Progression</div>
+                <div class="elcom-subtitle">Implementation <img src="/icons/arrow-top-right.svg" loading="lazy" width="24px" height="24px" /></div>
                 <div class="elcom-content">Members build their own careers paths and improve their skills and knowledge through a structured learning framework.</div>
-            </div>
-            <div class="elcom-card">
+            </a>
+            <a href="/services/integration" class="elcom-card">
+                <picture>
+                    <img src="/images/phone-and-computer.jpg" loading="lazy"/>
+                </picture>
+                <div class="elcom-subtitle">Integration <img src="/icons/arrow-top-right.svg" loading="lazy" width="24px" height="24px" /></div>
+                <div class="elcom-content">We foster collaborative communities where members share knowledge, best practices, and support each other's professional growth.</div>
+            </a>
+            <!-- <a href="/services/optimization" class="elcom-card">
                 <picture>
                     <img src="/images/card-3.jpg" loading="lazy"/>
                 </picture>
-                <div class="elcom-subtitle">Communities of Practice</div>
+                <div class="elcom-subtitle">Optimization <img src="/icons/arrow-top-right.svg" loading="lazy" width="24px" height="24px" /></div>
                 <div class="elcom-content">We foster collaborative communities where members share knowledge, best practices, and support each other's professional growth.</div>
-            </div>
+            </a>
+            <a href="/services/customization" class="elcom-card">
+                <picture>
+                    <img src="/images/card-3.jpg" loading="lazy"/>
+                </picture>
+                <div class="elcom-subtitle">Customization <img src="/icons/arrow-top-right.svg" loading="lazy" width="24px" height="24px" /></div>
+                <div class="elcom-content">We foster collaborative communities where members share knowledge, best practices, and support each other's professional growth.</div>
+            </a> -->
         </div>
     </div>
 </div>
 
 <div class="elcom-section elcom-platforms" id="platforms">
     <div class="elcom-container">
-        <div class="elcom-title">Experience with Industry-Leading Platforms</div>
+        <div class="elcom-title">Excel Within and Across Platform Verticals</div>
+        <div class="elcom-half-container">
+            <picture class="elcom-half-left">
+                <img src="/images/platforms.jpg" loading="lazy"/>
+            </picture>
+            <div class="elcom-half-right elcom-pane">
+                <a href="/platforms/sales" class="elcom-card">
+                    <img src="/icons/handshake.svg" loading="lazy"/>
+                    <span class="elcom-subtitle">Sales</span>
+                </a>
+                <a href="/platforms/work-management" class="elcom-card">
+                    <img src="/icons/clipboard.svg" loading="lazy"/>
+                    <span class="elcom-subtitle">Work Management</span>
+                </a>
+                <a href="/platforms/field-operations" class="elcom-card">
+                    <img src="/icons/tools.svg" loading="lazy"/>
+                    <span class="elcom-subtitle">Field Operations</span>
+                </a>
+                <a href="/platforms/finance-accounting" class="elcom-card">
+                    <img src="/icons/calculator.svg" loading="lazy"/>
+                    <span class="elcom-subtitle">Finance &amp; Accounting</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="elcom-section elcom-products" id="products">
+    <div class="elcom-container">
+        <div class="elcom-title">Experience with Industry Leading Products</div>
         <div class="elcom-content">
             Elevate Community was born from a passion for leveraging cutting-edge technologies to deliver exceptional solutions.
-            We specialize in implementing, integrating, and customizing base systems to meet the unique needs of our clients, ensuring optimal performance and user satisfaction.
+            We specialize in implementing, integrating, and customizing base products to meet the unique needs of our clients, ensuring optimal performance and user satisfaction.
         </div>
         <div class="elcom-card-group-4">
-            <div class="elcom-card">
+            <a href="/products/procore" class="elcom-card">
+                <picture>
+                    <img src="/images/logo-procore-dark.png" loading="lazy" style="scale: 0.9"/>
+                </picture>
+            </a>
+            <a href="/products/salesforce" class="elcom-card">
                 <picture>
                     <img src="/images/logo-salesforce.png" loading="lazy"/>
                 </picture>
-            </div>
-            <div class="elcom-card">
-                <picture>
-                    <img src="/images/logo-procore-dark.png" loading="lazy" style="scale: 0.8"/>
-                </picture>
-            </div>
-            <div class="elcom-card">
+            </a>
+            <a href="/products/sage" class="elcom-card">
                 <picture>
                     <img src="/images/logo-sage.png" loading="lazy"/>
                 </picture>
-            </div>
+            </a>
+            <a href="/products/workato" class="elcom-card">
+                <picture>
+                    <img src="/images/logo-workato.png" loading="lazy"/>
+                </picture>
+            </a>
+        </div>
+        <div class="elcom-card-group-8">
             <div class="elcom-card">
                 <picture>
-                    <img src="/images/logo-autodesk.png" loading="lazy" style="filter: invert(1)"/>
+                    <img src="/images/logo-ironclad.svg" loading="lazy" style="scale: 0.8;"/>
                 </picture>
             </div>
             <div class="elcom-card">
                 <picture>
-                    <img src="/images/logo-notion.png" loading="lazy" style="scale: 1.2; filter: invert(1);"/>
+                    <img src="/images/logo-autodesk.png" loading="lazy" style="filter: invert(1); scale: 0.9"/>
                 </picture>
             </div>
             <div class="elcom-card">
                 <picture>
-                    <img src="/images/logo-aws-dark.png" loading="lazy"/>
+                    <img src="/images/logo-dynamics-fs.png" loading="lazy" style="scale: 0.9;" />
+                </picture>
+            </div>
+            <div class="elcom-card">
+                <picture>
+                    <img src="/images/logo-softwrench.png" loading="lazy" style="scale: 0.9;" />
+                </picture>
+            </div>
+            <div class="elcom-card">
+                <picture>
+                    <img src="/images/logo-notion.png" loading="lazy" style="filter: invert(1);"/>
+                </picture>
+            </div>
+            <div class="elcom-card">
+                <picture>
+                    <img src="/images/logo-aws-dark.png" loading="lazy" style="scale: 0.9;"/>
                 </picture>
             </div>
             <div class="elcom-card">
@@ -114,6 +232,16 @@
                 </picture>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="elcom-section" id="stories">
+    <div class="elcom-container">
+        <div class="elcom-title">We Come Highly Recommended</div>
+        <div class="elcom-content">
+            Read stories from our clients and partners about how Elevate Community has helped them achieve their goals.
+        </div>
+        <a href="/stories" class="elcom-button">Read More</a>
     </div>
 </div>
 
@@ -158,7 +286,7 @@
 
 <div class="elcom-section elcom-cta" id="contact">
     <div class="elcom-container">
-        <div class="elcom-title">Ready to Elevate Your Presence?</div>
+        <div class="elcom-title">Ready to Elevate Your Technology Presence?</div>
         <div class="elcom-subtitle">Set an introductory call to see how you can get involved.</div>
         <a href="mailto:brandon@elevatecommunity.llc" class="elcom-button">Contact Us</a>
     </div>
@@ -166,15 +294,24 @@
 
 <div class="elcom-section elcom-footer" data-nosnippet>
     <div class="elcom-container">
-        <img src="/logo.svg"/>
+        <a href="/">
+            <img src="/logo.svg"/>
+        </a>
         <div class="elcom-content">
-            <ul class="elcom-ul elcom-links elcom-nav">
-                <li><a href="/">Home</a></li>
-                <li><a class="smooth-scroll-link" href="#services">Services</a></li>
-                <li><a class="smooth-scroll-link" href="#platforms">Platforms</a></li>
-                <li><a class="smooth-scroll-link" href="#about">About</a></li>
-                <li><a href="mailto:brandon@elevatecommunity.llc">Contact</a></li>
-            </ul>
+            <div class="elcom-dynamic-links">
+                <ul class="elcom-ul elcom-links elcom-nav">
+                    <li><a class="smooth-scroll-link" href="#services">Services</a></li>
+                    <li><a class="smooth-scroll-link" href="#platforms">Platforms</a></li>
+                    <li><a class="smooth-scroll-link" href="#products">Products</a></li>
+                    
+                </ul>
+                <ul class="elcom-ul elcom-links elcom-nav">
+                    <li><a class="smooth-scroll-link" href="#stories">Stories</a></li>
+                    <li><a class="smooth-scroll-link" href="#about">About</a></li>
+                    <li><a href="mailto:brandon@elevatecommunity.llc">Contact</a></li>
+                </ul>
+            </div>
+            
             <div class="copyright">&copy; 2026 Elevate Community, LLC. All rights reserved.</div>
         </div>
         <ul class="elcom-ul elcom-links elcom-quick-contact">
@@ -184,8 +321,9 @@
     </div>
 </div>
 
-<script src="/js/navbar-toggle.js?v=2"></script>
-<script src="/js/active-page.js?v=2"></script>
+<script src="/js/navbar-toggle.js"></script>
+<script src="/js/nav-drop-toggle.js"></script>
+<script src="/js/active-page.js"></script>
 <script src="/js/smooth-scroll.js"></script>
 
 <script>
