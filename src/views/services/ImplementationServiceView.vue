@@ -1,5 +1,5 @@
 <template>
-  <div class="elcom-section elcom-container">
+  <div class="elcom-section">
     <div class="elcom-content">
       <h1 class="elcom-title">Implement With Confidence</h1>
       <p>

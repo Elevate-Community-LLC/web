@@ -1,74 +1,76 @@
 <template>
-  <div class="elcom-section elcom-container">
+  <div class="elcom-section">
     <div class="elcom-content">
-      <h1 class="elcom-title">Optimize for Value</h1>
+      <h1 class="elcom-title">Customize to Fit Your Unique Business</h1>
       <p>
-        Optimization is the process to
-        <span class="elcom-emphasis">systematically improve how work creates value</span>
-        in an organization. This means maximizing desired outcomes
-        such as efficiency, speed, and output, and minimizing constraints
-        such as time, cost, and resource waste.
+        Out-of-the-box software rarely supports every operational requirement perfectly.
       </p>
       <p>
-        Operational inefficiency rarely comes from a single major problem. More often,
-        it <span class="elcom-emphasis">develops gradually</span> through disconnected workflows, repeated manual effort,
-        inconsistent processes, outdated assumptions, and technology environments that
-        no longer reflect how the organization actually operates.
+        As organizations grow, teams often encounter limitations within standard platform
+        functionality, disconnected workflows between systems, inconsistent reporting
+        structures, or operational processes that require significantly
+        <span class="elcom-emphasis">more flexibility</span>
+        than default configurations can provide. In many cases, businesses also outgrow
+        the constraints of third-party tools entirely and require custom-built applications
+        that provide complete control over workflows, data structures, reporting, and user experience.
       </p>
       <p>
-        Over time, teams begin compensating for inefficiencies with spreadsheets,
-        workarounds, redundant approvals, duplicated data entry, and
-        <span class="elcom-emphasis">retained institutional knowledge</span>
-        that becomes difficult to scale. Processes slow down, reporting becomes less reliable,
-        and operational complexity increases faster than the organization's ability to
-        manage it effectively.
-      </p>
-      <p>
-        We help businesses evaluate operational workflows, identify friction points,
-        simplify unnecessary complexity, and implement practical improvements supported
-        by lean technology solutions.
+        We provide <span class="elcom-emphasis">deep technical customization</span> and <span class="elcom-emphasis">software development</span> services that help
+        organizations extend existing platforms, integrate critical systems, and build entirely
+        custom operational solutions tailored to their business requirements.
       </p>
       <br/>
-      <div class="elcom-subtitle">Process Improvement</div>
+      <div class="elcom-subtitle">Extending Third-Party Products</div>
       <p>
-        Technology alone does not create operational efficiency. Poorly designed processes implemented
-        in modern software often remain inefficient - just faster and more difficult to diagnose.
+        Many organizations reach a point where basic administration and low-code configuration
+        on their purchased software products
+        are no longer sufficient to support operational complexity.
       </p>
       <p>
-        Our optimization approach begins with an <span class="elcom-emphasis">emphasis on how value is actually created</span>
-        during work accomplished by teams,
-        departments, and systems. Rather than assuming current workflows are correct, we evaluate
-        where delays occur, where information becomes fragmented, which activities create little
-        operational value, and which dependencies prevent teams from moving efficiently.
-      </p>
-      <p>
-        The goal is not to “digitize” existing workflows, but to <span class="elcom-emphasis">simplify, improve, and deliver</span>,
-        while introducing modern approaches to technology.
+        We help businesses extend holistic products, such as <RouterLink to="/products/salesforce">Salesforce</RouterLink>,
+        through advanced customization, application development,
+        workflow engineering, automated calculation, generative AI, and systems architecture planning.
+        Our work focuses on creating scalable,
+        maintainable technical solutions that align directly with operational requirements rather than
+        forcing teams to adapt around software constraints.
       </p>
       <br/>
-      <div class="elcom-subtitle">Lean Iteration</div>
+      <div class="elcom-subtitle">Custom Applications & Hosted Cloud Solutions</div>
       <p>
-        Many organizations struggle with optimization initiatives because improvement efforts
-        become too large, too rigid, or too dependent on long implementation cycles.
+        Some operational requirements cannot be solved effectively within existing third-party platforms alone.
       </p>
       <p>
-        Instead of attempting large-scale operational redesign, we often focus on:
+        In these cases, we help organizations design and deploy fully custom cloud-hosted applications and
+        infrastructure environments that provide <span class="elcom-emphasis">complete control</span>
+        over operational workflows, data managed in
+        existing systems, integrations, and reporting structures.
+      </p>
+      <p>
+        We work extensively with:
       </p>
       <ul>
-        <li>Small, measurable improvements</li>
-        <li>Simple technology updates</li>
-        <li>Rapid feedback cycles</li>
-        <li>Minimal disruption to day-to-day operations</li>
+        <li>Amazon Web Services</li>
+        <li>Microsoft Azure</li>
       </ul>
       <p>
-        This allows organizations to <span class="elcom-emphasis">progressively improve</span> operational performance, reduce risk,
-        and foster stronger stakeholder relationships.
+        Infrastructure and cloud services may include:
       </p>
+      <ul>
+        <li>Custom web applications</li>
+        <li>API and backend services</li>
+        <li>Middlewares</li>
+        <li>Cloud data architectures</li>
+        <li>Authentication and access management</li>
+        <li>Data warehousing and reporting pipelines</li>
+        <li>DevOps and deployment automation</li>
+        <li>Monitoring and logging systems</li>
+        <li>Rigorous security frameworks</li>
+      </ul>
       <p>
-        In practice, this may involve introducing lightweight workflow automation,
-        simplifying approval structures, reducing unnecessary handoffs, improving operational visibility,
-        or consolidating fragmented reporting processes, as opposed to pursuing
-        more complex transformation initiatives.
+        These solutions allow organizations to
+        <span class="elcom-emphasis">move beyond the limitations</span>
+        of rigid software products and
+        create operational platforms designed specifically around their business requirements.
       </p>
     </div>
   </div>

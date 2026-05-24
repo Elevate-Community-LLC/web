@@ -1,14 +1,8 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
 import NavbarLinkComponent from './NavbarLinkComponent.vue';
-import { watch } from 'vue';
 
 const route = useRoute();
-let path = '/';
-
-watch(() => route.path, () => {
-  path = route.path;
-});
 </script>
 
 <template>
@@ -25,31 +19,31 @@ watch(() => route.path, () => {
         <div class="elcom-dynamic-links">
           <ul class="elcom-ul elcom-links elcom-nav">
             <NavbarLinkComponent
-              :to="path === '/' ? '#services' : '/services'"
+              :to="route.path === '/' ? '#services' : '/services'"
               text="Services"
-              :is-smooth-scroll="path === '/'"
+              :is-smooth-scroll="route.path === '/'"
             />
             <NavbarLinkComponent
-              :to="path === '/' ? '#platforms' : '/platforms'"
+              :to="route.path === '/' ? '#platforms' : '/platforms'"
               text="Platforms"
-              :is-smooth-scroll="path === '/'"
+              :is-smooth-scroll="route.path === '/'"
             />
             <NavbarLinkComponent
-              :to="path === '/' ? '#products' : '/products'"
+              :to="route.path === '/' ? '#products' : '/products'"
               text="Products"
-              :is-smooth-scroll="path === '/'"
+              :is-smooth-scroll="route.path === '/'"
             />
           </ul>
           <ul class="elcom-ul elcom-links elcom-nav">
             <!-- <NavbarLinkComponent
-              :to="path === '/' ? '#stories' : '/stories'"
+              :to="route.path === '/' ? '#stories' : '/stories'"
               text="Stories"
-              :is-smooth-scroll="path === '/'"
+              :is-smooth-scroll="route.path === '/'"
             /> -->
             <NavbarLinkComponent
-              :to="path === '/' ? '#about' : '/about'"
+              :to="route.path === '/' ? '#about' : '/about'"
               text="About"
-              :is-smooth-scroll="path === '/'"
+              :is-smooth-scroll="route.path === '/'"
             />
             <li><a href="mailto:brandon@elevatecommunity.llc">Contact</a></li>
           </ul>
